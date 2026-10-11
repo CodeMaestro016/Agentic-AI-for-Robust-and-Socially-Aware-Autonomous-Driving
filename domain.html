@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Domain — Agentic AI for Robust and Socially-Aware Autonomous Driving. SLIIT Data Science group R26-DS-017."
+    >
+    <title>Domain | Agentic AI for Robust and Socially-Aware Autonomous Driving</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img
+            class="site-logo"
+            src="assets/logo/socialmind_logo.png"
+            alt="Socialmind Drive research project logo"
+            width="64"
+            height="64"
+          >
+          <span class="brand-copy">
+            Agentic AI for Robust and Socially-Aware Autonomous Driving<small>R26-DS-017 · SLIIT · BSc (Hons)
+            Data Science</small>
+          </span>
+        </a>
+        <nav class="nav desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <details class="domain-menu">
+            <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="domain-submenu">
+              <a href="domain.html" aria-current="page" class="active">Research Domain</a>
+              <a href="methodology.html">Detailed Methodology</a>
+              <a href="results.html">Results &amp; Findings</a>
+            </div>
+          </details>
+          <a href="milestones.html">Milestones</a>
+          <a href="documents.html">Documents</a>
+          <a href="presentations.html">Presentations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <details class="mobile-menu">
+          <summary>Menu <span aria-hidden="true" class="menu-icon"></span></summary>
+          <nav class="nav mobile-nav" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <details class="domain-menu" open>
+              <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+              <div class="domain-submenu">
+                <a href="domain.html" aria-current="page" class="active">Research Domain</a>
+                <a href="methodology.html">Detailed Methodology</a>
+                <a href="results.html">Results &amp; Findings</a>
+              </div>
+            </details>
+            <a href="milestones.html">Milestones</a>
+            <a href="documents.html">Documents</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            / Domain
+          </div>
+          <h1>Research Domain & Project Scope</h1>
+          <p>
+            Literature-driven motivation, research gap, problem formulation, objectives, and core technologies
+            across the four research components.
+          </p>
+        </div>
+      </section>
+
+      <nav class="local-toc container" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#literature-survey">Research Domain / Literature Survey</a></li>
+          <li><a href="#research-gap">Research Gap</a></li>
+          <li><a href="#research-problem">Research Problem</a></li>
+          <li><a href="#research-objectives">Research Objectives</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#technologies-used">Technologies Used</a></li>
+        </ol>
+        <div class="actions">
+          <a class="btn btn-outline" href="methodology.html">Detailed Methodology</a>
+          <a class="btn btn-outline" href="results.html">Results &amp; Findings</a>
+        </div>
+      </nav>
+
+      <section class="section section-white">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow" style="color:var(--teal-dark)">Research domain</div>
+            <h2 id="literature-survey">Research Domain / Literature Survey</h2>
+            <p>
+              The project sits at the intersection of autonomous driving, pedestrian behaviour understanding,
+              multi-agent decision-making, explainable AI, reinforcement learning, and privacy-aware collaborative
+              learning.
+            </p>
+          </div>
+          <div class="two-col-text">
+            <p>
+              Urban autonomous driving requires more than object detection. Vehicles must interpret intent under
+              partial evidence, reason about rules and conflicts, respond to nuanced human behaviour, and
+              coordinate or learn with other intelligent agents.
+            </p>
+            <p>
+              The four studies explore these challenges at different levels: pedestrian perception, intersection
+              negotiation, social reasoning, and fleet-level knowledge exchange. Together, they form a broader
+              investigation into adaptive and explainable agentic behaviour for autonomous vehicles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow" style="color:var(--teal-dark)">Literature survey summary</div>
+            <h2>Literature Survey</h2>
+          </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <h3>Pedestrian understanding</h3>
+              <p>
+                Prior work has established temporal and multimodal approaches for crossing-intention prediction,
+                including appearance, motion, pose, contextual cues, attention, graph models, and uncertainty
+                estimation. The remaining challenge is dependable decision-making when visibility is degraded and
+                evidence changes over time.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Intersection coordination</h3>
+              <p>
+                Multi-agent reinforcement learning, graph-based interaction models, trajectory coordination, and
+                rule-aware approaches provide foundations for unsignalized-intersection management. Remaining
+                difficulties include partial observation, uncertain intentions, simultaneous conflicts, hard
+                right-of-way constraints, and liveness.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Socially compliant AV behaviour</h3>
+              <p>
+                Pedestrian-intention research often frames the problem as crossing versus not crossing.
+                Theory-of-Mind-inspired work motivates richer behavioural states so that an AV can distinguish
+                waiting, hesitation, distraction, abnormal behaviour, and jaywalking and respond more proactively.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Collaborative vehicle learning</h3>
+              <p>
+                Federated learning and knowledge-distillation approaches reduce the need to centralise raw data, but
+                commonly exchange model updates or train toward a shared model. A separate question is whether an
+                individual observation is valuable enough to share at all.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow" style="color:var(--teal-dark)">Research gap</div>
+            <h2 id="research-gap">Research Gap</h2>
+          </div>
+          <div class="callout">
+            <strong>Overall gap.</strong>
+            Existing autonomous-driving research offers strong solutions for individual perception, prediction, coordination, and collaborative learning tasks, but complex urban operation still requires systems that can adapt to incomplete evidence, negotiate under safety and rule constraints, reason about human behavioural states, and exchange useful knowledge selectively rather than treating every observation or model update equally.
+          </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <span class="component-label">Component 01</span>
+              <h3>Occlusion-aware intent prediction</h3>
+              <p>
+                Conventional intent classifiers are typically expected to return a committed prediction even when
+                partial occlusion removes important appearance or motion evidence. The study addresses the need to
+                combine visibility reliability, calibrated uncertainty, and the option to defer a decision.
+              </p>
+            </div>
+            <div class="card">
+              <span class="component-label">Component 02</span>
+              <h3>Rule-constrained multi-agent negotiation</h3>
+              <p>
+                Learning-based coordination at unsignalized intersections must cope with partial observations,
+                intention uncertainty, multiple physical conflicts, and mandatory traffic-rule precedence. The
+                research separates non-negotiable rule and safety constraints from learned negotiation.
+              </p>
+            </div>
+            <div class="card">
+              <span class="component-label">Component 03</span>
+              <h3>Beyond binary pedestrian intent</h3>
+              <p>
+                Binary crossing / not-crossing formulations can overlook meaningful intermediate or risky behavioural
+                states. The study explores six operational behavioral categories and an interpretable link from
+                inferred state and time-to-collision to proactive AV action.
+              </p>
+            </div>
+            <div class="card">
+              <span class="component-label">Component 04</span>
+              <h3>Selective knowledge sharing</h3>
+              <p>
+                Conventional federated averaging shares model updates to support one common model. This study instead
+                asks whether one uncertain traffic-sign observation should be shared, verifies compact embeddings
+                before broadcast, and lets each vehicle retain its own specialist classifier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow" style="color:var(--teal-dark)">Research problem & proposed solution</div>
+            <h2 id="research-problem">Research Problem</h2>
+          </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <h3>01 · Occluded pedestrian intention</h3>
+              <p>
+                <strong>Problem:</strong> Partial occlusion degrades the visual evidence needed to infer whether a
+                pedestrian will cross, while classifier confidence may remain misleading.
+              </p>
+              <p>
+                <strong>Solution:</strong> Fuse appearance, spatial, motion, and Bayesian observation-reliability
+                features over 30 frames, predict intent with a Transformer, estimate uncertainty, and use a learned
+                selective policy to commit or observe more.
+              </p>
+            </div>
+            <div class="card">
+              <h3>02 · Right-of-way at complex intersections</h3>
+              <p>
+                <strong>Problem:</strong> Multiple AVs at uncontrolled intersections must infer intentions, identify
+                actual conflict zones, obey mandatory precedence, and coordinate without relying on a complete global
+                state.
+              </p>
+              <p>
+                <strong>Solution:</strong> Build ego-local maps, estimate intentions with two GRU models, construct
+                rule- and conflict-aware precedence graphs, and negotiate eligible relationships using graph-based
+                MAPPO.
+              </p>
+            </div>
+            <div class="card">
+              <h3>03 · Proactive social compliance</h3>
+              <p>
+                <strong>Problem:</strong> A reactive planner that only considers trajectory or binary crossing status
+                cannot distinguish nuanced pedestrian states requiring different anticipatory actions.
+              </p>
+              <p>
+                <strong>Solution:</strong> Extract 36 pose, motion, behavioural, and contextual features, classify
+                six operational behavioral categories with LSTM/GRU models and an ensemble, then apply a rule-based
+                TTC risk-aware decision mechanism.
+              </p>
+            </div>
+            <div class="card">
+              <h3>04 · Fleet knowledge sharing</h3>
+              <p>
+                <strong>Problem:</strong> A useful traffic sign learned by one vehicle may remain unavailable to
+                others, while continuous model-update exchange can be costly and removes local specialisation.
+              </p>
+              <p>
+                <strong>Solution:</strong> Detect and classify locally, let a DQN decide SHARE / IGNORE for rare or
+                new signs, verify shared embeddings centrally, broadcast accepted knowledge, and retrain each local
+                classifier later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Research objectives</div>
+            <h2 id="research-objectives">Research Objectives</h2>
+            <p>Separate objectives for four independently developed research studies.</p>
+          </div>
+          <div class="grid grid-2">
+            <div class="card">
+              <h3>Component 01</h3>
+              <ul class="clean-list">
+                <li>Predict crossing intention under partial pedestrian visibility.</li>
+                <li>Represent observation reliability probabilistically rather than as a hard visibility label.</li>
+                <li>Estimate and calibrate predictive uncertainty.</li>
+                <li>Learn when to commit to CROSSING / NOT CROSSING or request further evidence.</li>
+                <li>Provide evidence-based explanations and demonstrate raw-video operation.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Component 02</h3>
+              <ul class="clean-list">
+                <li>Construct decentralized ego-local representations of complex intersections.</li>
+                <li>Predict surrounding-vehicle manoeuvres before conflict resolution.</li>
+                <li>Combine physical conflict zones and traffic-rule precedence.</li>
+                <li>Learn negotiable precedence relationships with graph-based MAPPO.</li>
+                <li>Evaluate vehicle-owned SUMO execution for safety and liveness separately.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Component 03</h3>
+              <ul class="clean-list">
+                <li>Develop a reproducible 36-feature pedestrian-state representation.</li>
+                <li>Study six operational behavioral proxies, not verified psychological mental states.</li>
+                <li>Benchmark LSTM and GRU temporal classifiers using identical data splits.</li>
+                <li>Combine predictions with TTC in a rule-based TTC risk-aware decision mechanism.</li>
+                <li>Support explanations and multi-pedestrian threat prioritisation.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Component 04</h3>
+              <ul class="clean-list">
+                <li>Support selective sign-level knowledge sharing among vehicles.</li>
+                <li>Keep raw images and local classifier weights on the vehicle.</li>
+                <li>Verify submitted embeddings before broadcast.</li>
+                <li>Reuse accepted knowledge through temporary memory and later local retraining.</li>
+                <li>
+                  Demonstrate the complete path in CARLA and evaluate classifier changes on held-out traffic-sign
+                  crops.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="methodology-overview section">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="methodology">Methodology</h2>
+            <p>The four components address independent subproblems and use distinct experimental protocols.</p>
+          </div>
+          <div class="grid grid-2">
+            <article class="card">
+              <span class="component-label">Component 01</span>
+              <h3>Adaptive-Intent Prediction in Occluded Urban Scenarios</h3>
+              <p>
+                PIE, probabilistic observation reliability, a 525-D representation, 30-frame Transformer prediction,
+                uncertainty, and a learned selective policy.
+              </p>
+              <p><a href="methodology.html#component-1">Component 1 methodology</a></p>
+            </article>
+            <article class="card">
+              <span class="component-label">Component 02</span>
+              <h3>Multi-Agent Negotiation for Right-of-Way in Complex Intersections</h3>
+              <p>
+                inD intention prediction and SUMO + TraCI: rule precedence precedes constrained MAPPO negotiation at
+                an unsignalized intersection.
+              </p>
+              <p><a href="methodology.html#component-2">Component 2 methodology</a></p>
+            </article>
+            <article class="card">
+              <span class="component-label">Component 03</span>
+              <h3>Proactive Mental State Prediction Modeling using Theory of Mind</h3>
+              <p>
+                PIE, 36 features, track-disjoint temporal classification, and rule-based TTC decision support using
+                six operational behavioral categories.
+              </p>
+              <p><a href="methodology.html#component-3">Component 3 methodology</a></p>
+            </article>
+            <article class="card">
+              <span class="component-label">Component 04</span>
+              <h3>Agentic Knowledge Sharing for Federated Collective Learning in Autonomous Vehicles</h3>
+              <p>
+                YOLOv8n, separate MobileNetV2 classifiers, temporary memory, DQN sharing, server verification, manual
+                broadcast, and later local retraining.
+              </p>
+              <p><a href="methodology.html#component-4">Component 4 methodology</a></p>
+            </article>
+          </div>
+          <h2 class="spaced-heading">Scope and limitations</h2>
+          <p>
+            These studies demonstrate bounded research and simulation-level feasibility. Component 1 retains its
+            verified paper evidence; its supplied thesis is available in Documents. Component 2 exposes
+            dense-traffic deadlock despite zero observed collisions. Component 3 uses behavioral proxies and has
+            no verified real-world safety or generalization claim. Component 4 scores 12 selected classes, and no
+            ablation isolates causal contributions within its combined workflow.
+          </p>
+          <p><a href="results.html">Read the results and their limitations</a></p>
+        </div>
+      </section>
+
+      <section class="technology-section section section-white">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow" style="color:var(--teal-dark)">Technologies used</div>
+            <h2 id="technologies-used">Technologies Used</h2>
+          </div>
+          <div class="grid grid-4">
+            <div class="card">
+              <h3>Perception & vision</h3>
+              <div class="tags">
+                <span class="tag">YOLO</span>
+                <span class="tag">BoT-SORT</span>
+                <span class="tag">ResNet18</span>
+                <span class="tag">MediaPipe Pose</span>
+                <span class="tag">YOLOv8n</span>
+                <span class="tag">MobileNetV2</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Temporal learning</h3>
+              <div class="tags">
+                <span class="tag">Transformer</span>
+                <span class="tag">LSTM</span>
+                <span class="tag">GRU</span>
+                <span class="tag">Ensemble</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Agentic decision models</h3>
+              <div class="tags">
+                <span class="tag">MAPPO</span>
+                <span class="tag">DQN</span>
+                <span class="tag">Selective Policy</span>
+                <span class="tag">TTC Rules</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Simulation & evaluation</h3>
+              <div class="tags">
+                <span class="tag">SUMO</span>
+                <span class="tag">CARLA</span>
+                <span class="tag">PIE</span>
+                <span class="tag">inD</span>
+                <span class="tag">GTSDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <a class="btn btn-outline" href="documents.html">View project documents</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-project">
+            <div class="footer-eyebrow">SLIIT · Data Science</div>
+            <h2>Agentic AI for Robust and Socially-Aware Autonomous Driving</h2>
+            <p class="footer-group">Research group R26-DS-017</p>
+            <p>Four independent research studies under one academic project.</p>
+          </div>
+          <div>
+            <h2>Research</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="domain.html">Domain</a>
+                <ul class="footer-subnav">
+                  <li><a href="methodology.html">Methodology</a></li>
+                  <li><a href="results.html">Results &amp; Findings</a></li>
+                </ul>
+              </li>
+              <li><a href="milestones.html">Milestones</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Resources &amp; People</h2>
+            <ul>
+              <li><a href="documents.html">Documents</a></li>
+              <li><a href="presentations.html">Presentations</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 · Sri Lanka Institute of Information Technology</span>
+          <span>Academic research information website</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

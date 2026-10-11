@@ -1,0 +1,45 @@
+EMAILJS CONTACT FORM SETUP
+==========================
+
+The Contact Us page now includes an EmailJS form.
+
+1. Create/sign in to an EmailJS account:
+   https://www.emailjs.com/
+
+2. Add an Email Service.
+   Copy the Service ID.
+
+3. Create an Email Template.
+   Recommended template variables:
+     {{from_name}}
+     {{reply_to}}
+     {{subject}}
+     {{message}}
+     {{project_name}}
+
+   Configure the template's destination email address to the group/project email
+   address that should receive website enquiries.
+
+4. Open:
+     js/contact.js
+
+5. Replace:
+     YOUR_PUBLIC_KEY
+     YOUR_SERVICE_ID
+     YOUR_TEMPLATE_ID
+
+   with the values from the EmailJS dashboard.
+
+6. Keep the Public Key in the browser code. Do NOT put private email passwords,
+   secret API credentials, or SMTP passwords in the website files.
+
+7. Test the website through a local web server or after publishing it.
+   Example with Python:
+     python -m http.server 8000
+
+   Then open:
+     http://localhost:8000/
+
+Note:
+The form intentionally displays a clear configuration message until the three
+EmailJS values are filled in.

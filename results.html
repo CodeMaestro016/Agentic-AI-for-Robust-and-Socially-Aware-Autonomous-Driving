@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Results & Findings — Agentic AI for Robust and Socially-Aware Autonomous Driving. SLIIT Data Science group R26-DS-017."
+    >
+    <title>Results & Findings | Agentic AI for Robust and Socially-Aware Autonomous Driving</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img
+            class="site-logo"
+            src="assets/logo/socialmind_logo.png"
+            alt="Socialmind Drive research project logo"
+            width="64"
+            height="64"
+          >
+          <span class="brand-copy">
+            Agentic AI for Robust and Socially-Aware Autonomous Driving<small>R26-DS-017 · SLIIT · BSc (Hons)
+            Data Science</small>
+          </span>
+        </a>
+        <nav class="nav desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <details class="domain-menu">
+            <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="domain-submenu">
+              <a href="domain.html">Research Domain</a>
+              <a href="methodology.html">Detailed Methodology</a>
+              <a href="results.html" aria-current="page" class="active">Results &amp; Findings</a>
+            </div>
+          </details>
+          <a href="milestones.html">Milestones</a>
+          <a href="documents.html">Documents</a>
+          <a href="presentations.html">Presentations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <details class="mobile-menu">
+          <summary>Menu <span aria-hidden="true" class="menu-icon"></span></summary>
+          <nav class="nav mobile-nav" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <details class="domain-menu" open>
+              <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+              <div class="domain-submenu">
+                <a href="domain.html">Research Domain</a>
+                <a href="methodology.html">Detailed Methodology</a>
+                <a href="results.html" aria-current="page" class="active">Results &amp; Findings</a>
+              </div>
+            </details>
+            <a href="milestones.html">Milestones</a>
+            <a href="documents.html">Documents</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <nav class="secondary-nav container" aria-label="Research pages">
+        <a href="domain.html">Domain overview</a>
+        <a href="methodology.html">Detailed Methodology</a>
+        <a href="results.html" aria-current="page">Results &amp; Findings</a>
+      </nav>
+
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            / Results &amp; Findings
+          </div>
+          <h1>Results &amp; Findings</h1>
+          <p>Independent evaluations, headline metrics, and limitations for the four academic research studies.</p>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container" id="component-1">
+          <div class="section-head">
+            <span class="component-label">Component 01</span>
+            <h2>Adaptive-Intent Prediction in Occluded Urban Scenarios</h2>
+            <p>The Transformer intent model was evaluated on 1,152 held-out pedestrian sequences.</p>
+          </div>
+          <div class="grid grid-4">
+            <div class="metric">
+              <div class="value">87.59%</div>
+              <div class="label">Intent accuracy</div>
+            </div>
+            <div class="metric">
+              <div class="value">88.28%</div>
+              <div class="label">ROC-AUC</div>
+            </div>
+            <div class="metric">
+              <div class="value">88.94%</div>
+              <div class="label">Committed accuracy</div>
+            </div>
+            <div class="metric">
+              <div class="value">87.15%</div>
+              <div class="label">Decision coverage</div>
+            </div>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Component 1 evaluation results"
+            tabindex="0"
+            style="margin-top:24px"
+          >
+            <table>
+              <caption>Component 1 held-out intention and selective-decision metrics</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Metric</th>
+                  <th scope="col">Result</th>
+                  <th scope="col">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Precision</td>
+                  <td>61.63%</td>
+                  <td>Positive-class precision on the held-out intent test sequences.</td>
+                </tr>
+                <tr>
+                  <td>Recall</td>
+                  <td>75.50%</td>
+                  <td>Positive-class recall.</td>
+                </tr>
+                <tr>
+                  <td>F1-score</td>
+                  <td>67.87%</td>
+                  <td>Balance between precision and recall.</td>
+                </tr>
+                <tr>
+                  <td>Average Precision</td>
+                  <td>69.28%</td>
+                  <td>Ranking quality across positive predictions.</td>
+                </tr>
+                <tr>
+                  <td>Deferred observations</td>
+                  <td>12.85%</td>
+                  <td>Cases assigned to OBSERVE_MORE instead of a forced binary decision.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Finding:</strong>
+            The selective decision layer produced a modest increase in committed accuracy while deferring uncertain cases. The paper also reports that automatic detection, tracking and occlusion estimation remain more difficult than the intent model itself.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" id="component-2">
+          <div class="section-head">
+            <span class="component-label">Component 02</span>
+            <h2>Multi-Agent Negotiation for Right-of-Way in Complex Intersections</h2>
+          </div>
+          <p>
+            Final-thesis evaluation separates intention classification, validation-based policy selection,
+            held-out execution, and targeted system tests.
+          </p>
+          <div class="grid grid-4">
+            <div class="metric">
+              <div class="value">89.66%</div>
+              <div class="label">Primary GRU accuracy</div>
+              <p class="metric-detail">1.0 s horizon</p>
+            </div>
+            <div class="metric">
+              <div class="value">93.10%</div>
+              <div class="label">Secondary GRU accuracy</div>
+              <p class="metric-detail">0.5 s horizon</p>
+            </div>
+            <div class="metric">
+              <div class="value">108</div>
+              <div class="label">Held-out executions</div>
+              <p class="metric-detail">E5 policy</p>
+            </div>
+            <div class="metric">
+              <div class="value">426.64 s</div>
+              <div class="label">Mean held-out TTT</div>
+              <p class="metric-detail">0 collisions; 0 blocked-zone violations</p>
+            </div>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Deployed intention prediction — 58 test samples per model"
+            tabindex="0"
+          >
+            <table>
+              <caption>Deployed intention prediction — 58 test samples per model</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Model / horizon</th>
+                  <th scope="col">Accuracy</th>
+                  <th scope="col">Balanced accuracy</th>
+                  <th scope="col">Macro-F1</th>
+                  <th scope="col">Log loss</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Primary GRU / 1.0 s</th>
+                  <td>89.66%</td>
+                  <td>89.10%</td>
+                  <td>88.93%</td>
+                  <td>0.425</td>
+                </tr>
+                <tr>
+                  <th scope="row">Secondary GRU / 0.5 s</th>
+                  <td>93.10%</td>
+                  <td>91.67%</td>
+                  <td>92.38%</td>
+                  <td>0.245</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="MAPPO model selection — predefined validation Total Team Travel Time (TTT)"
+            tabindex="0"
+          >
+            <table>
+              <caption>MAPPO model selection — predefined validation Total Team Travel Time (TTT)</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Candidate</th>
+                  <th scope="col">PPO epochs</th>
+                  <th scope="col">Mean validation TTT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">E5 — selected</th>
+                  <td>5</td>
+                  <td>15,817.91 s</td>
+                </tr>
+                <tr>
+                  <th scope="row">E10</th>
+                  <td>10</td>
+                  <td>16,579.07 s</td>
+                </tr>
+                <tr>
+                  <th scope="row">E15</th>
+                  <td>15</td>
+                  <td>16,942.56 s</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Main finding:</strong>
+            E5 had the lowest predefined validation TTT among the tested candidates satisfying safety/integrity gates. This does not establish five epochs as globally optimal. A complete efficiency comparison against the deterministic no-negotiation baseline was not valid because that baseline failed a hard safety gate in one held-out scenario; overall MAPPO superiority is not established.
+          </div>
+          <h3>Targeted scientific validation</h3>
+          <p><strong>Safety and liveness are evaluated separately.</strong></p>
+          <div class="table-wrap" role="region" aria-label="Targeted validation outcomes" tabindex="0">
+            <table>
+              <caption>Targeted validation outcomes</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Test</th>
+                  <th scope="col">Completed</th>
+                  <th scope="col">Collisions / blocked-zone violations</th>
+                  <th scope="col">Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">PV-01 — rule-resolved</th>
+                  <td>2/2</td>
+                  <td>0 / 0</td>
+                  <td>PASS</td>
+                </tr>
+                <tr>
+                  <th scope="row">PV-03 — multiple left turns; MAPPO invoked</th>
+                  <td>3/3</td>
+                  <td>0 / 0</td>
+                  <td>PASS</td>
+                </tr>
+                <tr>
+                  <th scope="row">PV-04A — nominal dense traffic</th>
+                  <td>1/16 (6.25%)</td>
+                  <td>0 / 0</td>
+                  <td>SAFE_DEGRADATION</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="PV-04A dense-traffic scientific validation"
+            tabindex="0"
+          >
+            <table>
+              <caption>PV-04A dense-traffic scientific validation</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Measure</th>
+                  <th scope="col">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Vehicles scheduled / spawned</th>
+                  <td>16 / 16</td>
+                </tr>
+                <tr>
+                  <th scope="row">Maximum active / simultaneously moving</th>
+                  <td>16 / 16</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mean waiting</th>
+                  <td>141.87 s</td>
+                </tr>
+                <tr>
+                  <th scope="row">Throughput</th>
+                  <td>0.333 vehicles/min</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Liveness / deadlock limitation:</strong>
+            Only one of sixteen vehicles completed PV-04A. Collision-free operation does not make this dense test successful. Inconsistent ego-local intention and precedence beliefs can cause conservative holding and deadlock.
+          </div>
+          <div class="card">
+            <h3>Presentation / qualitative demonstration</h3>
+            <p>
+              <strong>Not a replacement for PV-04A scientific validation.</strong> A separate continuous-traffic
+              demo scheduled, spawned, and completed 16 vehicles in 82.76 simulated seconds, with at most 16 active
+              vehicles, no collision, and no blocked-zone violation. One SUMO emergency-braking warning occurred.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container" id="component-3">
+          <div class="section-head">
+            <span class="component-label">Component 03</span>
+            <h2>Proactive Mental State Prediction Modeling using Theory of Mind</h2>
+          </div>
+          <p>
+            Classification was evaluated on <strong>1,641 held-out PIE test sequences</strong>. The six
+            categories are operational behavioral proxies, not verified psychological mental states.
+          </p>
+          <div class="grid grid-3">
+            <div class="metric">
+              <div class="value">69.8%</div>
+              <div class="label">LSTM accuracy</div>
+            </div>
+            <div class="metric">
+              <div class="value">70.8%</div>
+              <div class="label">GRU accuracy</div>
+            </div>
+            <div class="metric">
+              <div class="value">71.5%</div>
+              <div class="label">Ensemble accuracy</div>
+            </div>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Six-state classification on the held-out test split"
+            tabindex="0"
+          >
+            <table>
+              <caption>Six-state classification on the held-out test split</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col">Accuracy</th>
+                  <th scope="col">Macro-F1</th>
+                  <th scope="col">Weighted F1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">LSTM</th>
+                  <td>69.8%</td>
+                  <td>59.5%</td>
+                  <td>70.7%</td>
+                </tr>
+                <tr>
+                  <th scope="row">GRU</th>
+                  <td>70.8%</td>
+                  <td>62.6%</td>
+                  <td>71.9%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Equal-weight LSTM–GRU ensemble</th>
+                  <td>71.5%</td>
+                  <td>62.1%</td>
+                  <td>72.4%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Main finding:</strong>
+            GRU achieved the highest macro-F1 even though the ensemble achieved the highest accuracy and weighted F1. The ensemble is not best on every metric.
+          </div>
+          <h3>CARLA feasibility demonstration</h3>
+          <p>
+            Six single-pedestrian scenarios and one multi-pedestrian scenario were used. The multi-pedestrian
+            scenario spawned 16 pedestrians, with at most five simultaneously visible. Configured states included
+            Committed, Waiting, Hesitant, Distracted, and Jaywalk.
+          </p>
+          <p>
+            The rule-based TTC risk-aware decision mechanism produced MAINTAIN, SLOW_DOWN, and STOP. Across
+            pedestrians, the most restrictive required action governs: <strong>STOP &gt; SLOW_DOWN &gt;
+            MAINTAIN</strong>.
+          </p>
+          <div class="callout">
+            <strong>Limitation:</strong>
+            The multi-pedestrian scenario did not establish quantitative classification accuracy or collision-avoidance performance. These results demonstrate simulation-based technical feasibility only; real-world safety and generalization remain unverified.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" id="component-4">
+          <div class="section-head">
+            <span class="component-label">Component 04</span>
+            <h2>Agentic Knowledge Sharing for Federated Collective Learning in Autonomous Vehicles</h2>
+          </div>
+          <p>
+            Separate vehicle classifiers were scored on the same 12-class single-sign crop set prepared from 300
+            held-out GTSDB evaluation scenes.
+          </p>
+          <div class="grid grid-3">
+            <div class="metric">
+              <div class="value">35.16% → 81.32%</div>
+              <div class="label">Vehicle A</div>
+              <p class="metric-detail">Test 0 → Test 3</p>
+            </div>
+            <div class="metric">
+              <div class="value">17.58% → 79.35%</div>
+              <div class="label">Vehicle B</div>
+              <p class="metric-detail">Test 0 → Test 3</p>
+            </div>
+            <div class="metric">
+              <div class="value">39.56% → 73.63%</div>
+              <div class="label">Vehicle C</div>
+              <p class="metric-detail">Test 0 → Test 2</p>
+            </div>
+          </div>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="Accuracy changes across the evaluated workflow"
+            tabindex="0"
+          >
+            <table>
+              <caption>Accuracy changes across the evaluated workflow</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Vehicle</th>
+                  <th scope="col">Initial accuracy</th>
+                  <th scope="col">Latest completed accuracy</th>
+                  <th scope="col">Evaluation stage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">A</th>
+                  <td>35.16%</td>
+                  <td>81.32%</td>
+                  <td>Test 3</td>
+                </tr>
+                <tr>
+                  <th scope="row">B</th>
+                  <td>17.58%</td>
+                  <td>79.35%</td>
+                  <td>Test 3</td>
+                </tr>
+                <tr>
+                  <th scope="row">C</th>
+                  <td>39.56%</td>
+                  <td>73.63%</td>
+                  <td>Test 2; Test 3 not completed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            <strong>Main finding:</strong>
+            Accuracy changes reflect the combined workflow; no ablation isolated individual causal contributions. Improvement belongs to sharing, temporary memory, and later local retraining together; it cannot be attributed to DQN, server verification, or sharing alone.
+          </div>
+          <div class="card">
+            <h3>Scope and limitations</h3>
+            <p>
+              Only 12 selected classes were scored, although the reference store and classification heads cover 43
+              classes. CARLA Town01 provides an integration demonstration, not the accuracy figures. Broadcast is
+              manually triggered; receiving a package does not immediately update a classifier. Vehicle C did not
+              complete Test 3.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <a class="btn btn-outline" href="documents.html">View project documents</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-project">
+            <div class="footer-eyebrow">SLIIT · Data Science</div>
+            <h2>Agentic AI for Robust and Socially-Aware Autonomous Driving</h2>
+            <p class="footer-group">Research group R26-DS-017</p>
+            <p>Four independent research studies under one academic project.</p>
+          </div>
+          <div>
+            <h2>Research</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="domain.html">Domain</a>
+                <ul class="footer-subnav">
+                  <li><a href="methodology.html">Methodology</a></li>
+                  <li><a href="results.html">Results &amp; Findings</a></li>
+                </ul>
+              </li>
+              <li><a href="milestones.html">Milestones</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Resources &amp; People</h2>
+            <ul>
+              <li><a href="documents.html">Documents</a></li>
+              <li><a href="presentations.html">Presentations</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 · Sri Lanka Institute of Information Technology</span>
+          <span>Academic research information website</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+UPDATED WEBSITE CHANGES
+=======================
+
+1. About Us
+   - Academic Supervisor and Co-Supervisor are now shown first.
+   - Group Member cards are shown below the supervisors.
+
+2. Contact Us
+   - Added a general EmailJS-powered contact form.
+   - Academic Supervision is shown before Research Team details.
+   - Existing direct member/supervisor email links are preserved.
+   - See EMAILJS_SETUP.txt before publishing the contact form.
+
+3. Milestones
+   - Project Proposal through Research Paper are marked COMPLETED.
+   - Final Report is marked UPCOMING.
+
+4. EmailJS
+   - Added js/contact.js.
+   - You must insert your EmailJS Public Key, Service ID, and Template ID.

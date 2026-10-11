@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Methodology — Agentic AI for Robust and Socially-Aware Autonomous Driving. SLIIT Data Science group R26-DS-017."
+    >
+    <title>Methodology | Agentic AI for Robust and Socially-Aware Autonomous Driving</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img
+            class="site-logo"
+            src="assets/logo/socialmind_logo.png"
+            alt="Socialmind Drive research project logo"
+            width="64"
+            height="64"
+          >
+          <span class="brand-copy">
+            Agentic AI for Robust and Socially-Aware Autonomous Driving<small>R26-DS-017 · SLIIT · BSc (Hons)
+            Data Science</small>
+          </span>
+        </a>
+        <nav class="nav desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <details class="domain-menu">
+            <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+            <div class="domain-submenu">
+              <a href="domain.html">Research Domain</a>
+              <a href="methodology.html" aria-current="page" class="active">Detailed Methodology</a>
+              <a href="results.html">Results &amp; Findings</a>
+            </div>
+          </details>
+          <a href="milestones.html">Milestones</a>
+          <a href="documents.html">Documents</a>
+          <a href="presentations.html">Presentations</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <details class="mobile-menu">
+          <summary>Menu <span aria-hidden="true" class="menu-icon"></span></summary>
+          <nav class="nav mobile-nav" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <details class="domain-menu" open>
+              <summary class="active">Domain <span class="nav-chevron" aria-hidden="true"></span></summary>
+              <div class="domain-submenu">
+                <a href="domain.html">Research Domain</a>
+                <a href="methodology.html" aria-current="page" class="active">Detailed Methodology</a>
+                <a href="results.html">Results &amp; Findings</a>
+              </div>
+            </details>
+            <a href="milestones.html">Milestones</a>
+            <a href="documents.html">Documents</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <nav class="secondary-nav container" aria-label="Research pages">
+        <a href="domain.html">Domain overview</a>
+        <a href="methodology.html" aria-current="page">Detailed Methodology</a>
+        <a href="results.html">Results &amp; Findings</a>
+      </nav>
+
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            / Research Methodology
+          </div>
+          <h1>Research Methodology</h1>
+          <p>
+            Four independently developed research studies with distinct datasets, methods, and evaluation
+            protocols.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Four studies, four experimental pipelines</h2>
+            <p>
+              The components share an academic theme, while each is developed and evaluated independently. They are
+              research prototypes and do not constitute one tightly coupled production system.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" id="component-1">
+          <div class="section-head">
+            <span class="component-label">Component 01</span>
+            <h2>Adaptive-Intent Prediction in Occluded Urban Scenarios</h2>
+            <p>
+              Occlusion-aware pedestrian intention prediction with uncertainty-sensitive selective decision-making.
+            </p>
+          </div>
+          <div class="pipeline">
+            <div class="pipe-step">
+              <h3>Video & tracking</h3>
+              <p>PIE observations; runtime detection with a fine-tuned YOLO detector and BoT-SORT.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Occlusion evidence</h3>
+              <p>Three-class occlusion estimator predicts no, partial, or full occlusion probabilities.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>525-D representation</h3>
+              <p>ResNet18 appearance + six spatial + four motion + three Bayesian reliability features.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>30-frame sequence</h3>
+              <p>Fixed temporal input preserves evolving appearance, motion and reliability.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Transformer intent</h3>
+              <p>Outputs crossing probability from the temporal multimodal sequence.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Uncertainty</h3>
+              <p>Monte Carlo dropout, entropy/variance measures, and temperature scaling.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Selective agent</h3>
+              <p>MLP policy chooses OBSERVE_MORE, COMMIT_NOT_CROSSING, or COMMIT_CROSSING.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Explanation</h3>
+              <p>Integrated Gradients groups evidence into intent, uncertainty, reliability and motion factors.</p>
+            </div>
+          </div>
+          <div class="card" style="margin-top:24px">
+            <h3>Evaluation protocol</h3>
+            <p>
+              Pedestrian-level separation was used to reduce identity leakage. The held-out test set contained
+              1,152 pedestrian sequences. Intent performance used accuracy, precision, recall, F1, ROC-AUC and AP;
+              selective decisions used committed accuracy and coverage.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" id="component-2">
+          <div class="section-head">
+            <span class="component-label">Component 02</span>
+            <h2>Multi-Agent Negotiation for Right-of-Way in Complex Intersections</h2>
+          </div>
+          <p>
+            Autonomous-vehicle-only research prototype at an unsignalized four-way SUMO intersection, controlled
+            through TraCI at a 0.04 s simulation step.
+          </p>
+          <div class="pipeline">
+            <div class="pipe-step">
+              <h3>Ego-local observation</h3>
+              <p>Each vehicle maintains its own Local Dynamic Map (LDM) and local maneuver-intention estimates.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Conflict relevance</h3>
+              <p>
+                Movement paths, 30 physical conflict zones, and temporal relevance identify relationships needing
+                coordination.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Mandatory precedence</h3>
+              <p>
+                Traffic-rule precedence is resolved before reinforcement learning; structured precedence claims are
+                exchanged.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Joint-local graph</h3>
+              <p>
+                Each ego owns its graph. An edge-aware message-passing representation uses 8-D nodes, 9-D edges,
+                hidden dimension 64, and 3 layers.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Eligible negotiation</h3>
+              <p>
+                MAPPO handles only negotiation-eligible relationships using semantic actions and hard invalid-action
+                masks.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Physical execution</h3>
+              <p>
+                Vehicle-owned decentralized execution converts resolved obligations to behavior while SUMO native
+                safety behavior remains active.
+              </p>
+            </div>
+          </div>
+          <h3>Semantic negotiation actions</h3>
+          <div class="table-wrap" role="region" aria-label="MAPPO operates on precedence claims" tabindex="0">
+            <table>
+              <caption>MAPPO operates on precedence claims</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Role</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Proposer</th>
+                  <td>KEEP_CLAIM · RELINQUISH_CLAIM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Responder</th>
+                  <td>ACCEPT_RELINQUISHMENT · REJECT_RELINQUISHMENT</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            MAPPO does not directly select steering, brake, or throttle. Dense traffic can exceed four live
+            vehicles, but learned negotiation is bounded to at most four physical queue-head participants, one
+            per approach.
+          </p>
+          <h3>Simulation and perception abstraction</h3>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="SUMO vehicle and intersection configuration"
+            tabindex="0"
+          >
+            <table>
+              <caption>SUMO vehicle and intersection configuration</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Parameter</th>
+                  <th scope="col">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Legal movements</th>
+                  <td>12: four approaches × left / straight / right</td>
+                </tr>
+                <tr>
+                  <th scope="row">Physical conflict zones</th>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Simulation step</th>
+                  <td>0.04 s</td>
+                </tr>
+                <tr>
+                  <th scope="row">Maximum vehicle speed</th>
+                  <td>13.89 m/s</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vehicle length / width</th>
+                  <td>5.0 m / 1.8 m</td>
+                </tr>
+                <tr>
+                  <th scope="row">Acceleration / normal deceleration</th>
+                  <td>2.0 m/s² / 4.5 m/s²</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            The four-sensor reference configuration uses 160 m individual sensing range and fused surround
+            coverage. This is an <strong>ego-local simulation sensing abstraction</strong>, not a validated real
+            radar configuration.
+          </p>
+          <h3>Intention-prediction protocol</h3>
+          <div class="table-wrap" role="region" aria-label="inD causal motion sequences" tabindex="0">
+            <table>
+              <caption>inD causal motion sequences</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Setting</th>
+                  <th scope="col">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Training / validation / test recordings</th>
+                  <td>7–14 / 15–16 / 17</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sampling / history</th>
+                  <td>25 Hz / 2.0 s</td>
+                </tr>
+                <tr>
+                  <th scope="row">Input</th>
+                  <td>48 × 6 causal motion features</td>
+                </tr>
+                <tr>
+                  <th scope="row">Classes</th>
+                  <td>Left / Right / Straight</td>
+                </tr>
+                <tr>
+                  <th scope="row">Primary / secondary GRU horizons</th>
+                  <td>1.0 s / 0.5 s</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout">
+            Validation selected E5 from three predefined PPO-epoch candidates. Held-out and targeted tests evaluate safety and liveness separately; dense-traffic deadlock remains a limitation.
+            <a href="results.html#component-2">View Component 2 results</a>
+            .
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container" id="component-3">
+          <div class="section-head">
+            <span class="component-label">Component 03</span>
+            <h2>Proactive Mental State Prediction Modeling using Theory of Mind</h2>
+          </div>
+          <p>
+            PIE pedestrian tracks are transformed into operational behavioral categories and rule-based TTC
+            risk-aware decision support.
+          </p>
+          <div class="pipeline">
+            <div class="pipe-step">
+              <h3>Feature extraction</h3>
+              <p>
+                MediaPipe-based pose landmarks support 36 features: 10 motion, 12 pose, 9 behavioral, and 5
+                contextual.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Temporal sequences</h3>
+              <p>
+                30 frames × 36 features, sliding-window stride 5 frames; track-disjoint 70:15:15 train / validation /
+                test split.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Behavioral prediction</h3>
+              <p>LSTM, GRU, and an equal-weight probability ensemble predict six operational categories.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Rule-based decision</h3>
+              <p>Behavioral category and TTC jointly inform MAINTAIN, SLOW_DOWN, or STOP.</p>
+            </div>
+          </div>
+          <h3>Six operational behavioral states</h3>
+          <div class="tags">
+            <span class="tag">Waiting</span>
+            <span class="tag">Hesitant</span>
+            <span class="tag">Committed</span>
+            <span class="tag">Distracted</span>
+            <span class="tag">Aggressive</span>
+            <span class="tag">Jaywalk</span>
+          </div>
+          <p>
+            These categories are operational behavioral proxies; they are not verified psychological mental
+            states.
+          </p>
+          <div
+            class="table-wrap"
+            role="region"
+            aria-label="TTC risk thresholds — behavioral state also informs the final rule mechanism"
+            tabindex="0"
+          >
+            <table>
+              <caption>TTC risk thresholds — behavioral state also informs the final rule mechanism</caption>
+              <thead>
+                <tr>
+                  <th scope="col">TTC</th>
+                  <th scope="col">Risk</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">TTC > 2.5 s</th>
+                  <td>Low</td>
+                  <td>MAINTAIN</td>
+                </tr>
+                <tr>
+                  <th scope="row">1.5 s &lt; TTC ≤ 2.5 s</th>
+                  <td>Warning</td>
+                  <td>SLOW_DOWN</td>
+                </tr>
+                <tr>
+                  <th scope="row">TTC ≤ 1.5 s</th>
+                  <td>Critical</td>
+                  <td>STOP</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Multiple pedestrians</h3>
+          <p>
+            Each pedestrian is assessed and the overall response takes the most restrictive required action: STOP
+            &gt; SLOW_DOWN &gt; MAINTAIN. CARLA evaluation includes six single-pedestrian scenarios and one
+            multi-pedestrian scenario, with 16 spawned and at most five simultaneously visible pedestrians.
+          </p>
+          <div class="callout">
+            The mechanism is rule-based decision support. CARLA establishes simulation-level technical
+            feasibility; the multi-pedestrian scenario supplies no quantitative classification or
+            collision-avoidance metric.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" id="component-4">
+          <div class="section-head">
+            <span class="component-label">Component 04</span>
+            <h2>Agentic Knowledge Sharing for Federated Collective Learning in Autonomous Vehicles</h2>
+          </div>
+          <p>
+            Each vehicle retains its own MobileNetV2 traffic-sign classifier. Selective exchange uses verified
+            embeddings and metadata.
+          </p>
+          <div class="pipeline">
+            <div class="pipe-step">
+              <h3>Shared detection</h3>
+              <p>
+                YOLOv8n identifies the traffic-sign region; the vehicle-specific MobileNetV2 classifier estimates
+                confidence.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Confidence categories</h3>
+              <p>
+                KNOWN ≥ 0.70; RARE ≥ 0.30 and &lt; 0.70; NEW &lt; 0.30. Rare/new observations check local temporary
+                memory first.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Memory and DQN</h3>
+              <p>Memory cosine threshold is 0.70. Without a match, a pretrained DQN selects SHARE or IGNORE.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Importance score</h3>
+              <p>Importance = 0.83 × visual prominence + 0.17 × novelty.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Compact package</h3>
+              <p>An embedding and metadata are shared. Raw camera images and classifier weights are excluded.</p>
+            </div>
+            <div class="pipe-step">
+              <h3>Server verification</h3>
+              <p>
+                Cosine similarity ≥ 0.70 against a 43-class reference store is required for acceptance into the
+                broadcast queue.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Manual broadcast</h3>
+              <p>
+                Broadcast is manually triggered. Vehicles save accepted packages in separate temporary memories;
+                receipt does not update classifiers immediately.
+              </p>
+            </div>
+            <div class="pipe-step">
+              <h3>Later local retraining</h3>
+              <p>The MobileNetV2 base is frozen and the existing 43-class classification head is updated locally.</p>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Evaluation protocol</h3>
+            <p>
+              The same 12-class single-sign crop set, prepared from 300 held-out GTSDB scenes, evaluates three
+              specialist vehicles. CARLA Town01 demonstrates integration; it is not the source of accuracy figures.
+            </p>
+          </div>
+          <div class="callout">
+            Observed accuracy changes belong to the combined sharing + memory + local retraining workflow. No
+            controlled ablation isolates individual stages. Vehicle C completed Test 2 but not Test 3.
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <a class="btn btn-outline" href="documents.html">View project documents</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-project">
+            <div class="footer-eyebrow">SLIIT · Data Science</div>
+            <h2>Agentic AI for Robust and Socially-Aware Autonomous Driving</h2>
+            <p class="footer-group">Research group R26-DS-017</p>
+            <p>Four independent research studies under one academic project.</p>
+          </div>
+          <div>
+            <h2>Research</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="domain.html">Domain</a>
+                <ul class="footer-subnav">
+                  <li><a href="methodology.html">Methodology</a></li>
+                  <li><a href="results.html">Results &amp; Findings</a></li>
+                </ul>
+              </li>
+              <li><a href="milestones.html">Milestones</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Resources &amp; People</h2>
+            <ul>
+              <li><a href="documents.html">Documents</a></li>
+              <li><a href="presentations.html">Presentations</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 · Sri Lanka Institute of Information Technology</span>
+          <span>Academic research information website</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
